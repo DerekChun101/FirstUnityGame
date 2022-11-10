@@ -6,10 +6,10 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigid;
     [SerializeField] float movement;
-    [SerializeField] int speed = 15;
+    [SerializeField] int speed = 10;
     [SerializeField] bool isFacingRight = true;
     [SerializeField] bool jumpPressed = false;
-    [SerializeField] float jumpForce = 500.0f;
+    [SerializeField] float jumpForce = 400.0f;
     [SerializeField] bool isGrounded = true;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
             jumpPressed = true;
     }
 
