@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rigid;
     [SerializeField] float movement;
+    [SerializeField] float movementup;
     [SerializeField] int speed = 10;
     [SerializeField] bool isFacingRight = true;
     [SerializeField] bool jumpPressed = false;
@@ -22,12 +23,14 @@ public class Movement : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
+        movementup = Input.GetAxis("Vertical");
         if (Input.GetButtonDown("Jump") && isGrounded)
             jumpPressed = true;
     }
 
     void FixedUpdate()
     {
+        rigid.velocity = new Vector2(rigid.velocity.x, movementup * speed);
         rigid.velocity = new Vector2(movement * speed, rigid.velocity.y);
         if ((movement < 0 && isFacingRight) || (movement > 0 && !isFacingRight))
             Flip();
