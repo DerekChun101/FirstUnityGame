@@ -26,17 +26,17 @@ public class balloonmovement : MonoBehaviour
             movement = new Vector2(-1f, 0);
 
         }
-        if (transform.position.x < -13) 
-        { 
+        if (transform.position.x < -13)
+        {
             movement = new Vector2(0, 0);
             movement = new Vector2(1f, 0);
-         }
+        }
         if (transform.position.y > 6)
         {
             movement = new Vector2(0, 0);
             movement = new Vector2(0, -1f);
         }
-        if(transform.position.y < -6)
+        if (transform.position.y < -6)
         {
             movement = new Vector2(0, 0);
             movement = new Vector2(0, 1f);
@@ -49,7 +49,12 @@ public class balloonmovement : MonoBehaviour
     {
         rigid.AddForce(movement * maxSpeed);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if ((other.gameObject.CompareTag("balloon")))
+        {
+            Destroy(other.gameObject);
+        }
 
-
-
+    }
 }

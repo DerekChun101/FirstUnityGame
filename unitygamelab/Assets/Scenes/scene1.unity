@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &159741584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4365388222942315994, guid: 35a158bd8e0b5b848b3b9225e0605d91, type: 3}
+  m_PrefabInstance: {fileID: 4365388223105910664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &159741589
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159741584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0613755, y: 1.2218881}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7675416, y: 1.8363509}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509929639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9551, y: 0.357, z: 0}
+  m_LocalPosition: {x: 0.9551, y: 0.3, z: 0}
   m_LocalScale: {x: 4.4386168, y: 4.8442464, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -309,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinPrefab: {fileID: 3350124112276041766, guid: 7bd091dbdb8733042a477bb85d9058b1, type: 3}
-  fireRate: 1
+  fireRate: 0.1
 --- !u!1001 &2522450367198584806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,6 +399,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2522450368580851259, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
     - {fileID: 172126741924965380, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
+    - {fileID: 2522450368580851258, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
 --- !u!1001 &4365388223105910664
 PrefabInstance:
@@ -379,6 +411,10 @@ PrefabInstance:
     - target: {fileID: 4365388222942315994, guid: 35a158bd8e0b5b848b3b9225e0605d91, type: 3}
       propertyPath: m_Name
       value: balloonTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365388222942315994, guid: 35a158bd8e0b5b848b3b9225e0605d91, type: 3}
+      propertyPath: m_TagString
+      value: balloon
       objectReference: {fileID: 0}
     - target: {fileID: 4365388222942315996, guid: 35a158bd8e0b5b848b3b9225e0605d91, type: 3}
       propertyPath: m_RootOrder
