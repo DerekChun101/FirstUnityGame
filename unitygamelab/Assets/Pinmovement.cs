@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pinmovement : MonoBehaviour
 {
     
-    [SerializeField] float speed = 100f;
+    [SerializeField] float speed = 10f;
     Rigidbody2D rigid;
     GameObject pin;
     Vector2 movement;

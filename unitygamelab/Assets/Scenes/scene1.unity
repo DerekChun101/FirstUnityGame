@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinPrefab: {fileID: 3350124112276041766, guid: 7bd091dbdb8733042a477bb85d9058b1, type: 3}
-  fireRate: 0.1
+  fireRate: 1
 --- !u!1001 &2522450367198584806
 PrefabInstance:
   m_ObjectHideFlags: 0
