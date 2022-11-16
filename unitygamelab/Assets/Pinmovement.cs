@@ -4,25 +4,34 @@ using UnityEngine;
 
 public class Pinmovement : MonoBehaviour
 {
-    GameObject playerObj = null;
-    [SerializeField] GameObject pinPrefab;
     Vector2 movement;
-    [SerializeField] float speed = 1f;
-    Rigidbody rigid;
+    [SerializeField] float speed = 10f;
+    Rigidbody2D rigid;
+    public Movement cs;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       if (rigid == null)
+           rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rigid.velocity = new Vector2(movement * speed, 0);
+        if (cs.isFacingRight == true)
+        {
+            movement = new Vector2(3, 0);
+        }
+        if (cs.isFacingRight == false)
+            movement = new Vector2(0, 100);
 
     }
 
-    
+    void FixedUpdate()
+    {
+       
+        rigid.AddForce(movement * speed);
+    }
 
 }

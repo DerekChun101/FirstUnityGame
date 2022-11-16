@@ -308,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105c6c2eb2d67144790a921cd5c94354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: 0
   pinPrefab: {fileID: 3350124112276041766, guid: 7bd091dbdb8733042a477bb85d9058b1, type: 3}
+  fireRate: 1
 --- !u!1001 &2522450367198584806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,6 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2522450368580851259, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
+    - {fileID: 172126741924965380, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 10298f68f5d5ed244b7c48c9270ff2be, type: 3}
 --- !u!1001 &4365388223105910664
 PrefabInstance:

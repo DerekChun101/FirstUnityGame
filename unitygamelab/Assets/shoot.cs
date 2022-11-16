@@ -6,8 +6,9 @@ using UnityEngine;
 public class shoot : MonoBehaviour
 {
     GameObject playerObj = null;
-    [SerializeField] bool fire = true;
     [SerializeField] GameObject pinPrefab;
+    [SerializeField] float fireRate = 1;
+    float lastShot = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,24 +18,26 @@ public class shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1"))
-        {
-            
-            spawn();
-           
 
+        if (Input.GetButton("Fire1"))
+        {
+            spawn();
         }
         
     }
     void spawn()
     {
-        float x = playerObj.transform.position.x;
-        float y = playerObj.transform.position.y;
-        
 
-        Vector2 position = new Vector2(x, y);
-        Instantiate(pinPrefab, position, Quaternion.identity);
-        fire = true;
+        if (Time.time > fireRate + lastShot) {
+            float x = playerObj.transform.position.x;
+            float y = playerObj.transform.position.y;
+
+
+            Vector2 position = new Vector2(x, y);
+            Instantiate(pinPrefab, position, Quaternion.identity);
+            lastShot = Time.time;
+
+        }
 
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2522450368580851260}
   - component: {fileID: 2522450368580851261}
   - component: {fileID: 2522450368580851258}
-  - component: {fileID: 2522450368580851259}
+  - component: {fileID: 172126741924965380}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -155,7 +155,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7440352, y: 3.2649598}
   m_EdgeRadius: 0
---- !u!114 &2522450368580851259
+--- !u!114 &172126741924965380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,7 +164,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2522450368580851248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a48ad0cfe70544478676ff6cfb457e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 105c6c2eb2d67144790a921cd5c94354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: 0
+  pinPrefab: {fileID: 3350124112276041766, guid: 7bd091dbdb8733042a477bb85d9058b1, type: 3}
+  fireRate: 1

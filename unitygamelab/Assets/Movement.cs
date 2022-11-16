@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float movement;
     [SerializeField] float movementup;
     [SerializeField] int speed = 10;
-    [SerializeField] bool isFacingRight = true;
+    [SerializeField] public bool isFacingRight = true;
     [SerializeField] bool jumpPressed = false;
     [SerializeField] float jumpForce = 400.0f;
     [SerializeField] bool isGrounded = true;
