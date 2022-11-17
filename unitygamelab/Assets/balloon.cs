@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class balloon : MonoBehaviour
 {
+    [SerializeField] GameObject controller;
     [SerializeField] AudioSource audio;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,6 @@ public class balloon : MonoBehaviour
             Destroy(other.gameObject);
         }
         AudioSource.PlayClipAtPoint(audio.clip, transform.position);
-
+        controller.GetComponent<Score>().UpdateScore();
     }
 }
