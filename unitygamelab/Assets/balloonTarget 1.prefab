@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2540359065084588890}
   - component: {fileID: -7095224955268078323}
   - component: {fileID: 8302148843642147048}
+  - component: {fileID: -1835631852668666688}
   m_Layer: 0
   m_Name: balloonTarget 1
   m_TagString: balloon
@@ -259,3 +260,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1835631852668666688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2540359065180719005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9d3ae8929e2ab40b2c1913022be1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
