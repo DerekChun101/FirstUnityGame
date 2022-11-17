@@ -23,9 +23,9 @@ public class balloon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.CompareTag("balloon")))
+        if ((other.gameObject.CompareTag("pin")))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
         AudioSource.PlayClipAtPoint(audio.clip, transform.position);
         score();
