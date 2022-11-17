@@ -28,6 +28,13 @@ public class balloon : MonoBehaviour
             Destroy(other.gameObject);
         }
         AudioSource.PlayClipAtPoint(audio.clip, transform.position);
-        controller.GetComponent<Score>().UpdateScore();
+        score();
+    }
+    void score()
+    {
+        if (gameObject.transform.localScale.x > 1.0 && gameObject.transform.localScale.y > 1.0)
+            controller.GetComponent<Score>().UpdateScore(2);
+        if (gameObject.transform.localScale.x > 2.0 && gameObject.transform.localScale.y > 2.0)
+            controller.GetComponent<Score>().UpdateScore(3);
     }
 }
