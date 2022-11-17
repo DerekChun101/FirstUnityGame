@@ -41,20 +41,10 @@ public class balloonmovement : MonoBehaviour
             movement = new Vector2(0, 0);
             movement = new Vector2(0, 1f);
         }
-
-
-
     }
     void FixedUpdate()
     {
         rigid.AddForce(movement * maxSpeed);
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if ((other.gameObject.CompareTag("balloon")))
-        {
-            Destroy(other.gameObject);
-        }
 
-    }
 }
