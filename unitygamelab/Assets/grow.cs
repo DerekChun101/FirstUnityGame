@@ -11,7 +11,7 @@ public class grow : MonoBehaviour
     void Start()
     {
         scale = Random.Range(0.01f, 0.02f);
-        InvokeRepeating("Grow", 1f, 0.05f);
+        InvokeRepeating("Grow", 1f, 0.5f);
         scaleChange = new Vector3(scale, scale, scale);
 
     }
