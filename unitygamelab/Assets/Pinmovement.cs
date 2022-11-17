@@ -7,7 +7,6 @@ public class Pinmovement : MonoBehaviour
     
     [SerializeField] float speed = 10f;
     Rigidbody2D rigid;
-    GameObject pin;
     Vector2 movement;
 
 
@@ -18,13 +17,19 @@ public class Pinmovement : MonoBehaviour
         {
             rigid = GetComponent<Rigidbody2D>(); 
         }
+        gameObject.tag = "pin";
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector2(3, 0);
+        if(transform.rotation.eulerAngles.y == 180)
+            movement = new Vector2(-3, 0);
+        else
+        {
+            movement = new Vector2(3, 0);
+        }
     }
 
     void FixedUpdate()

@@ -35,7 +35,7 @@ public class shoot : MonoBehaviour
 
             Vector2 position = new Vector2(x, y);
             GameObject new_pin = Instantiate(pinPrefab, position, Quaternion.identity);
-            //new_pin.transform.right = transform.right.normalized; // code to transform pin to direction of player
+            new_pin.transform.right = transform.right.normalized; // code to transform pin to direction of player
             lastShot = Time.time;
 
         }
