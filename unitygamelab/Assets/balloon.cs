@@ -34,12 +34,12 @@ public class balloon : MonoBehaviour
     {
         if (gameObject.transform.localScale.x < 1.5 && gameObject.transform.localScale.y < 1.5)
         {
-            //controller.GetComponent<Score>().UpdateScore(2);
+            controller.GetComponent<Score>().AddPoints(2);
             Debug.Log("2");
         }
         else if (gameObject.transform.localScale.x > 1.5 && gameObject.transform.localScale.y > 1.5)
         {
-            //controller.GetComponent<Score>().UpdateScore(3);
+            controller.GetComponent<Score>().AddPoints(3);
             Debug.Log("3");
         }
         else
