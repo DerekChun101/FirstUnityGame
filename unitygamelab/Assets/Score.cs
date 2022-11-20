@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     {
         score = persistentData.Instance.GetScore();
         playerName = persistentData.Instance.GetName();
-        level = SceneManager.GetActiveScene().buildIndex - 1;
+        level = SceneManager.GetActiveScene().buildIndex + 1;
         DisplayScore();
         sceneText.text = "Level " + (level);
 
@@ -27,7 +27,10 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameObject.FindGameObjectsWithTag("balloon").Length == 0)
+        {
+            AdvanceLevel();
+        }
     }
 
     public void AddPoints(int pointsToAdd)
@@ -35,6 +38,10 @@ public class Score : MonoBehaviour
         score += pointsToAdd;
         persistentData.Instance.SetScore(score);
         DisplayScore();
+    }
+    public void AdvanceLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void DisplayScore()
