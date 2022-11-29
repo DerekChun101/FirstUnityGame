@@ -2,14 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PauseResume : MonoBehaviour
 {
-  public void PauseGame() 
-  {
-    Time.timeScale = 0.0f;
-  }
-  public void ResumeGame() 
-  {
-    Time.timeScale = 1.0f;
-  }
+    bool isPause = false;
+    public GameObject PasueMenuUi;
+    void Update()
+    {
+        if (Input.GetKeyDown("escape")) {
+             
+             if(isPause == true)
+             { 
+                 ResumeGame();
+             } 
+             
+             else {
+                 PauseGame();
+             }
+         }
+     }
+    
+    public void PauseGame() 
+    {
+        Time.timeScale = 0.0f;
+        isPause = true;
+        PasueMenuUi.SetActive(true);
+    }
+    public void ResumeGame() 
+    {
+        Time.timeScale = 1.0f;
+        isPause = false;
+        PasueMenuUi.SetActive(false);
+    }
 }
