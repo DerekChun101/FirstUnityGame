@@ -27,9 +27,9 @@ public class BlackBalloon : MonoBehaviour
         if ((other.gameObject.CompareTag("pin")))
         {
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(audio.clip, transform.position);
+            score();
         }
-        AudioSource.PlayClipAtPoint(audio.clip, transform.position);
-        score();
     }
     void score()
     {

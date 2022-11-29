@@ -429,6 +429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blackballoon 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4754538511969598375, guid: 50259fac06d202d458ae6f463d70663f, type: 3}
+      propertyPath: m_TagString
+      value: blackballoon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50259fac06d202d458ae6f463d70663f, type: 3}
 --- !u!1 &963341468

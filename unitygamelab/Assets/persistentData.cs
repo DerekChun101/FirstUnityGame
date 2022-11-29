@@ -13,7 +13,6 @@ public class persistentData : MonoBehaviour
     {
         if (Instance == null)
         {
-            DontDestroyOnLoad(this);
             Instance = this;
         }
         else
