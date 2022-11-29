@@ -5,14 +5,10 @@ using UnityEngine;
 public class PauseResume : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  void PauseGame() {
+    Time.timeScale = 0;
+  }
+  void ResumeGame() {
+    Time.timeScale = 1;
+  }
 }
