@@ -39,6 +39,9 @@ public class PauseResume : MonoBehaviour
     public void LoadMenu() {
          
          SceneManager.LoadScene("Menu");
+         isPause = false;
+         Time.timeScale = 1.0f;
+
 
     }
 }

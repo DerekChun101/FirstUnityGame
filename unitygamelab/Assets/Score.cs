@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     {
         score = persistentData.Instance.GetScore();
         playerName = persistentData.Instance.GetName();
-        level = SceneManager.GetActiveScene().buildIndex;
+        level = SceneManager.GetActiveScene().buildIndex - 3;
         DisplayScore();
         sceneText.text = "Level " + (level);
 
