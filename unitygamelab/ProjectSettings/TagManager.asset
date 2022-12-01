@@ -8,6 +8,8 @@ TagManager:
   - pin
   - balloon
   - blackballoon
+  - bird
+  - Bull
   layers:
   - Default
   - TransparentFX

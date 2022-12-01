@@ -25,6 +25,15 @@ public class onHit : MonoBehaviour
         }
         Destroy(gameObject);
 
+        if ((other.gameObject.CompareTag("bird")))
+        {
+            Destroy(gameObject);
+        }
+        if ((other.gameObject.CompareTag("Bull")))
+        {
+            Destroy(gameObject);
+        }
+         
     }
     void FixedUpdate()
     {

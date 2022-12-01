@@ -11,7 +11,7 @@ public class grow : MonoBehaviour
     void Start()
     {
         scale = Random.Range(0.02f, 0.04f);
-        InvokeRepeating("Grow", 1f, 0.1f);
+        InvokeRepeating("Grow", 1f, 0.2f);
         scaleChange = new Vector3(scale, scale, scale);
 
     }
@@ -25,7 +25,7 @@ public class grow : MonoBehaviour
     {
         if (gameObject.transform.localScale.x < 2.5 && gameObject.transform.localScale.y < 2.5)
             gameObject.transform.localScale += scaleChange; //Scale object up 
-        else if (gameObject.transform.localScale.x > 2.49 && gameObject.transform.localScale.y > 2.49)// Destroys object if too big
+        else if (gameObject.transform.localScale.x > 2 && gameObject.transform.localScale.y > 2)// Destroys object if too big
         {
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(audio.clip, transform.position);

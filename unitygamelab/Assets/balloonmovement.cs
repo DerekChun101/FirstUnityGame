@@ -7,7 +7,6 @@ public class balloonmovement : MonoBehaviour
     [SerializeField] float maxSpeed = 6f;
     [SerializeField] Rigidbody2D rigid;
     Vector2 movement;
-    float timeLeft;
     // Start is called before the first frame update
     void Start()
     {

@@ -56,4 +56,5 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             isGrounded = true;
     }
+
 }
