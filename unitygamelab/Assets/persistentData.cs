@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class persistentData : MonoBehaviour
 {
     [SerializeField] string playerName;
     [SerializeField] int playerScore;
+    
     // Start is called before the first frame update
     public static persistentData Instance;
 
@@ -46,6 +48,12 @@ public class persistentData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+         if (sceneName == "Win Screen") 
+         {
+            playerName = "";
+            playerScore = 0;
+         }
     }
 }

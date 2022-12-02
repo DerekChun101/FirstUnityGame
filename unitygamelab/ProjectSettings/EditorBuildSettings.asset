@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win Screen.unity
     guid: f9e615ceb3729574baed7a171d1000b4
+  - enabled: 1
+    path: Assets/Scenes/HighScore.unity
+    guid: 89941f80382cfeb499655c9c8c5cf2bd
   m_configObjects: {}
